@@ -1,0 +1,33 @@
+.space {
+    margin-top: 125px;
+}
+
+.box {
+    border: solid 2px black;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subKat {
+    background-color: white;
+    border: none;
+    color: rgba(255, 136, 52, 1);
+}
+
+.img {
+    margin: 4px 4px 4px 4px;
+}
+
+.inputKat {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-color: white;
+
+}
+
+.inputKat:focus {
+    outline-color: rgba(255, 136, 52, 1);
+    outline: none;
+
+}
