@@ -1,6 +1,8 @@
 import React from 'react'
 import NavbarLogin from '../../components/Navbarlogin/NavbarLogin'
 import { Container, Row, Col } from 'react-bootstrap'
+import AdminContent from '../../components/AdminContent/AdminContent'
+import SearchContent from '../../components/SearchContent/SearchContent'
 
 export default function LoginAdmin() {
     return (
@@ -8,7 +10,13 @@ export default function LoginAdmin() {
             <NavbarLogin />
             <Container>
                 <Row>
-                    <Col>
+                    <Col sm={3}>
+                        <AdminContent />
+                    </Col>
+                    <Col sm={6}>
+                        <SearchContent />
+                    </Col>
+                    <Col sm={3}>
                     </Col>
                 </Row>
             </Container>

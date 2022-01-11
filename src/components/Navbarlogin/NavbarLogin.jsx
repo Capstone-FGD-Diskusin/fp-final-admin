@@ -22,13 +22,13 @@ export default function NavbarLogin() {
             <div className={style.navbar}>
                 <div className={style.content}>
                     <div className={style.logo}>
-                        <Link to={``}><Image src={gambar} width="60px" /></Link>
+                        <Link to={`/HomeLogin`}><Image src={gambar} width="60px" /></Link>
                     </div>
                     <div className={style.middle}>
                     </div>
-                    <div className={style.bar}>
+                    {/* <div className={style.bar}>
                         <FaIcons.FaBars size={25} onClick={setDown} />
-                    </div>
+                    </div> */}
                     <div className={style.right}>
                         <div>
                             <FiIcons.FiBell size={20} />

@@ -1,0 +1,15 @@
+.space {
+    margin-top: 50px;
+}
+
+.search {
+    border-color: rgba(255, 136, 52, 1);
+    outline-color: rgba(255, 136, 52, 1);
+
+}
+
+.search:focus {
+    border-color: rgba(255, 136, 52, 1);
+    outline: rgba(255, 136, 52, 1);
+
+}

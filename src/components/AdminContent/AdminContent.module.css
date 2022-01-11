@@ -1,0 +1,17 @@
+.text {
+    padding-top: 100px;
+    border-bottom: solid black 2px;
+    /* margin-bottom: ; */
+    width: 70px;
+    /* text-decoration: underline; */
+    /* text-align: center; */
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    color: rgba(255, 136, 52, 1);
+}
