@@ -27,8 +27,11 @@ export default function SearchContent() {
                                 onChange={handleChange}
                             />
                         </Form>
+
                     </Col>
                 </Row>
+
+
             </Container>
 
         </div>
