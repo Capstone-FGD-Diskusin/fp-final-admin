@@ -6,13 +6,13 @@ import LoginAdmin from './pages/LoginAdmin/LoginAdmin';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<HomeLogin/>}/>
-          <Route path="/HomeLogin" element={<LoginAdmin/>}/>
-          </Routes>
-        </BrowserRouter>
+            <Route path="/" element={<HomeLogin/>}/>
+            <Route path="/HomeLogin" element={<LoginAdmin/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
