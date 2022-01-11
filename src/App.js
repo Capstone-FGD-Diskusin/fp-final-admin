@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter ,Route, Routes } from "react-router-dom";
 import HomeLogin from './pages/HomeLogin/HomeLogin';
+import Kategori from './pages/Kategori/Kategori';
 import LoginAdmin from './pages/LoginAdmin/LoginAdmin';
 import User from './pages/User/User';
 // import {NavbarLogin} from "./pages/"
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<HomeLogin/>}/>
             <Route path="/HomeLogin" element={<LoginAdmin/>}/>
             <Route path="/HomeLogin/User" element={<User/>}/>
+            <Route path="/HomeLogin/Kategori" element={<Kategori/>}/>
         </Routes>
       </BrowserRouter>
     </div>
