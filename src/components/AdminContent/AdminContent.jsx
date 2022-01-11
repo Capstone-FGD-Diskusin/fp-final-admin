@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import style from "./AdminContent.module.css"
 import { AdminData } from './AdminData'
 
+
 export default function AdminContent() {
     return (
         <div>
