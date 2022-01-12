@@ -15,7 +15,8 @@ export default function KategoriInput() {
                             <div className={style.box}>
                                 <Image src={gambar} width="30px" className={style.img} />
                                 <Form.Control type="text" className={style.inputKat} />
-                                <input type="submit" className={style.subKat} value="Tambah" />
+                                {/* <input type="submit" className={style.subKat} value="Tambah" /> */}
+                                <button type="submit" className={style.subKat}>Tambah</button>
                             </div>
                         </Form>
                     </Col>

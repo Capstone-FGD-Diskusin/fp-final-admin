@@ -16,10 +16,10 @@ export default function DiskusiContent() {
                                 <Row>
                                     <Col>
                                         <div className={style.label}>
-                                            <FiIcons.FiUser size={20} />
-                                            <h6>{item.User}</h6>
-                                            <Button className={style.edit}><h6 className={style.text2}>Edit</h6></Button>
-                                            <Button className={style.Hapus}>Hapus</Button>
+                                            <FiIcons.FiUser size={25} />
+                                            <h5>{item.User}</h5>
+                                            <button className={style.edit}><h6 className={style.text2}>Edit</h6></button>
+                                            <button className={style.Hapus}><h6 className={style.text2}>Hapus</h6></button>
                                         </div>
                                     </Col>
                                 </Row>
@@ -38,6 +38,6 @@ export default function DiskusiContent() {
                 })
             }
 
-        </div>
+        </div >
     )
 }

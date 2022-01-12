@@ -33,7 +33,7 @@ export default function UserContent() {
             <Container>
                 <h6 className={style.text}>Hasil</h6>
                 {
-                    UserContentData.map((item, index) => {
+                    Data.map((item, index) => {
                         return (
                             <div key={index}>
                                 <div className={style.box}>
@@ -42,7 +42,7 @@ export default function UserContent() {
                                         <h6>{item.username}</h6>
                                     </div>
                                     <div className={style.butPosisi}>
-                                        <Button className={style.buttonDel} onClick={() => handleDelete(index)}>Hapus User</Button>
+                                        <button className={style.buttonDel} onClick={() => handleDelete(index)}>Hapus User</button>
                                         {/* <h6>Hapus</h6> 
                                         <h6>Posis</h6> */}
                                     </div>

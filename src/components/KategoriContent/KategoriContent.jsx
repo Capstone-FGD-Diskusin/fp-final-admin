@@ -8,12 +8,30 @@ import gambar from "../../img/adminKategori.png"
 
 
 export default function KategoriContent() {
+    const [Data, setData] = useState(KategoriData)
+
+    const handleDelete = (event) => {
+        // event.preventDefault();
+        console.log("ini index", event);
+
+        const newData = Data.filter((e, i) => {
+            if (i !== event) {
+                return e
+
+            }
+            console.log("ini di dalem");
+        })
+
+        console.log("ini new data", newData);
+        console.log("ini data", Data);
+        setData(newData)
+    }
     return (
         <div>
             <Container>
                 <h6 className={style.text}>Hasil</h6>
                 {
-                    KategoriData.map((item, index) => {
+                    Data.map((item, index) => {
                         return (
                             <div key={index}>
                                 <div className={style.box}>
@@ -25,9 +43,11 @@ export default function KategoriContent() {
                                     <div className={style.butPosisi}>
                                         {/* <Button className={style.buttonDel} onClick={() => handleDelete(index)}>Hapus</Button> */}
                                         {/* <Button className={style.buttonDel} >Hapus</Button> */}
-                                        <input type="submit" className={style.delete} value="Hapus" />
+                                        {/* <input type="submit" className={style.delete} value="Hapus" /> */}
                                         {/* <h6>Hapus</h6> 
                                         <h6>Posis</h6> */}
+
+                                        <button type="submit" className={style.delete} onClick={() => handleDelete(index)}>Hapus</button>
                                     </div>
                                 </div>
                             </div>

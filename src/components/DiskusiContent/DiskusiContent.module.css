@@ -3,7 +3,9 @@
     margin-top: 50px;
 }
 
-.text2 {}
+.text2 {
+    margin-top: 4px;
+}
 
 .text3 {
     margin-top: 8px;
@@ -14,14 +16,14 @@
     display: flex;
     margin-top: 10px;
     margin-bottom: 5px;
-
+    gap: 1rem;
 }
 
 .edit {
     font-size: small;
     background-color: white;
     color: rgba(255, 136, 52, 1);
-    border-color: white;
+    border: white;
     height: 30px;
     margin-bottom: 10px;
 }
@@ -41,9 +43,9 @@
     font-size: small;
     background-color: white;
     color: rgba(255, 136, 52, 1);
-    border-color: white;
+    border: white;
     height: 30px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .Hapus:focus {
