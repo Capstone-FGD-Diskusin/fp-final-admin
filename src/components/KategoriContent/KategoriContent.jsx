@@ -5,11 +5,14 @@ import { KategoriData } from './KategoriData'
 import * as FiIcons from 'react-icons/fi';
 import { useState } from 'react'
 import gambar from "../../img/adminKategori.png"
+import GetAllCategory from '../Hooks/GET/GetAllCategory';
 
 
-export default function KategoriContent() {
+export default function KategoriContent(props) {
     const [Data, setData] = useState(KategoriData)
+    const stateGetAllCategory = GetAllCategory(props)
 
+    console.log("ini stategetall", stateGetAllCategory);
     const handleDelete = (event) => {
         // event.preventDefault();
         console.log("ini index", event);
@@ -31,14 +34,14 @@ export default function KategoriContent() {
             <Container>
                 <h6 className={style.text}>Hasil</h6>
                 {
-                    Data.map((item, index) => {
+                    stateGetAllCategory?.data.data.map((item, index) => {
                         return (
                             <div key={index}>
                                 <div className={style.box}>
                                     <div className={style.Posisi}>
                                         {/* <FiIcons.FiUser size={20} className={style.space} /> */}
                                         <Image src={gambar} width="20px" className={style.img} />
-                                        <h6>{item.Kategori}</h6>
+                                        <h6>{stateGetAllCategory ? item.Name : null}</h6>
                                     </div>
                                     <div className={style.butPosisi}>
                                         {/* <Button className={style.buttonDel} onClick={() => handleDelete(index)}>Hapus</Button> */}
