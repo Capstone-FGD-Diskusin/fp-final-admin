@@ -4,12 +4,17 @@ import Diskusi from './pages/Diskusi/Diskusi';
 import HomeLogin from './pages/HomeLogin/HomeLogin';
 import Kategori from './pages/Kategori/Kategori';
 import LoginAdmin from './pages/LoginAdmin/LoginAdmin';
-import User from './pages/User/User';
+import User from './pages/User/User'
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { persistor, store } from "./redux/store";;
 // import {NavbarLogin} from "./pages/"
 
 function App() {
   return (
     <div >
+      <Provider store={store}>
+      <PersistGate persistor={persistor}>
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomeLogin/>}/>
@@ -19,6 +24,8 @@ function App() {
             <Route path="/HomeLogin/Diskusi" element={<Diskusi/>}/>
         </Routes>
       </BrowserRouter>
+      </PersistGate>
+      </Provider>
     </div>
   );
 }
