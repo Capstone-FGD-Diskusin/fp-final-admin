@@ -4,13 +4,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import swal from 'sweetalert';
 
-export default function GetAllCategory() {
+export default function GetAllThread() {
     const [state,setState] = useState(null)
     
-    const URL = `http://localhost:1234/category`
+    const URL = `http://localhost:1234/thread`
     let history = useNavigate();
+    const i = 0
 
-    useEffect(() => {
+    
             const getData = async () => {
                 Axios.get(URL)
                     .then(res => {
@@ -55,10 +56,14 @@ export default function GetAllCategory() {
                         console.log(error.config);
                     })
             }
-            getData();
-            // console.log(profile)
+            useEffect(() => {
+                if (i==0) {
+                    getData();
+                    // console.log(profile)
+                }
+            },
+                []);
         
-    },
-        []);
-        return  state
+
+        return  {state, getData}
 }

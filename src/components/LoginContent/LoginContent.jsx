@@ -158,7 +158,7 @@ export default function LoginContent() {
                                 />
                             </Form.Group>
                             <div className="d-grid gap-2">
-                                <Button type="submit" size="lg" className={style.butLog}>
+                                <Button type="submit" size="lg" className={style.butLog} onSubmit={handleSubmit}>
                                     <h6 className={style.text3}>Login</h6>
                                 </Button>
                             </div>
