@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-// const username = ""
-// const password = ""
+const username = ""
+const password = ""
 // const fileRegis = ""
 // const usernameRegis = ""
 // const passwordRegis = ""
@@ -13,8 +13,8 @@ const token =""
 export const slice =  createSlice({
     name : "dataUser",
     initialState:{
-        // username : username,
-        // password : password,
+        username : username,
+        password : password,
         // fileRegis : fileRegis,
         // usernameRegis : usernameRegis,
         // passwordRegis : passwordRegis,
@@ -26,15 +26,15 @@ export const slice =  createSlice({
 
     reducers:{
 
-        // setUsername : (state, action) => {
-        //     console.log("dalem reducers username",action.payload);
-        //     state.username = action.payload
-        // },
+        setUsername : (state, action) => {
+            console.log("dalem reducers username",action.payload);
+            state.username = action.payload
+        },
 
-        // setPassword : (state, action) => {
-        //     console.log("dalem reducers passwrod",action.payload);
-        //     state.password = action.payload
-        // },
+        setPassword : (state, action) => {
+            console.log("dalem reducers passwrod",action.payload);
+            state.password = action.payload
+        },
         // setFileRegis : (state, action) => {
         //     state.fileRegis = action.payload
         // },
@@ -62,8 +62,8 @@ export const slice =  createSlice({
 
 export const {
     setToken,
-    // setUsername, 
-    // setPassword, 
+    setUsername, 
+    setPassword, 
     // setFileRegis, 
     // setUsernameRegis, 
     // setPasswordRegis,

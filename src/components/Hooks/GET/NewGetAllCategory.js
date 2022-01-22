@@ -4,13 +4,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import swal from 'sweetalert';
 
-export default function GetAllCategory() {
+export default function NewGwtAllCategory() {
     const [state,setState] = useState(null)
     
     const URL = `http://localhost:1234/category`
     let history = useNavigate();
+    const i = 0
 
-    useEffect(() => {
             const getData = async () => {
                 Axios.get(URL)
                     .then(res => {
@@ -53,12 +53,18 @@ export default function GetAllCategory() {
                             console.log('Error', error.message);
                         }
                         console.log(error.config);
-                    })
+                    })  
             }
-            getData();
+           
+            
+            useEffect(() => {
+                if (i==0) {
+                    getData();
+                    // console.log(profile)
+                }
+            },
+                []);
             // console.log(profile)
-        
-    },
-        []);
-        return  state
+
+        return {state , getData}
 }
