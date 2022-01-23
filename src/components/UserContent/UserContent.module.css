@@ -1,0 +1,53 @@
+.text {
+    margin-top: 35px;
+    font-weight: bolder;
+}
+
+.box {
+    border: solid 2px rgba(255, 136, 52, 1);
+    margin-bottom: 10px;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.space {
+    margin-left: 15px;
+}
+
+.buttonDel {
+    background-color: white;
+    border: white;
+    color: rgba(255, 136, 52, 1);
+    height: 25px;
+    /* display: flex;
+    justify-content: right; */
+    margin-top: 3px;
+}
+
+.buttonDel:hover {
+    background-color: white;
+    border: white;
+    color: rgba(255, 136, 52, 1);
+
+}
+
+.buttonDel:focus {
+    background-color: white;
+    border: white;
+    color: rgba(255, 136, 52, 1);
+    outline: none;
+    outline-color: none;
+}
+
+
+.Posisi {
+    display: flex;
+    gap: 1rem;
+    padding-top: 5px;
+}
+
+.butPosisi {
+    display: flex;
+    margin-right: 30px;
+}
