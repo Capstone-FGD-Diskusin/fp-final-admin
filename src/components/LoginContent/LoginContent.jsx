@@ -41,6 +41,7 @@ export default function LoginContent() {
         console.log(data);
         let isTrue = false;
         const URL = `http://localhost:1234/user/login`
+        e.preventDefault()
         await Axios.post(URL,
             {
                 email: data.username,

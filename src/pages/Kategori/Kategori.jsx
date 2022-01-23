@@ -5,8 +5,21 @@ import AdminContent from '../../components/AdminContent/AdminContent'
 import SearchContent from '../../components/SearchContent/SearchContent'
 import KategoriContent from '../../components/KategoriContent/KategoriContent'
 import KategoriInput from '../../components/KategoriInput/KategoriInput'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from "react"
 
 export default function Kategori() {
+    const token = useSelector((state) => state.dataUser.token)
+    let history = useNavigate();
+
+
+    useEffect(() => {
+        if (token == "") {
+            history("/Login");
+            console.log("ini kosong");
+        }
+    }, [token])
     return (
         <div>
             <NavbarLogin />
