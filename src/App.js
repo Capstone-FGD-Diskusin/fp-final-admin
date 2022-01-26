@@ -7,7 +7,8 @@ import LoginAdmin from './pages/LoginAdmin/LoginAdmin';
 import User from './pages/User/User'
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import { persistor, store } from "./redux/store";;
+import { persistor, store } from "./redux/store";import Message from './pages/Message/Message';
+;
 // import {NavbarLogin} from "./pages/"
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/HomeLogin/User" element={<User/>}/>
             <Route path="/HomeLogin/Kategori" element={<Kategori/>}/>
             <Route path="/HomeLogin/Diskusi" element={<Diskusi/>}/>
+            <Route path="/HomeLogin/Message" element={<Message/>}/>
         </Routes>
       </BrowserRouter>
       </PersistGate>
