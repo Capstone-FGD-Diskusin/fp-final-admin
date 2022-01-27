@@ -11,4 +11,8 @@ export const AdminData = [
         Admin : "Diskusi",
         Path : "/HomeLogin/Diskusi",
     },
+    {
+        Admin : "Message",
+        Path : "/HomeLogin/Message",
+    },
 ]

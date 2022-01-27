@@ -32,7 +32,7 @@ export default function KategoriContent(props) {
     }
 
     const handleEdit = (index) => {
-        const URLPut = `http://localhost:1234/category/` + index + ``
+        const URLPut = `http://34.101.171.217:1234/category/` + index + ``
         Axios.put(URLPut,
             {
                 // email: data.fileRegis,
@@ -79,7 +79,7 @@ export default function KategoriContent(props) {
 
     const handleDelete = (index) => {
         // console.log("ini index", index);
-        const URL = `http://localhost:1234/category/` + index + ``
+        const URL = `http://34.101.171.217:1234/category/` + index + ``
         Axios.delete(URL
         )
             .then(res => {
@@ -123,84 +123,89 @@ export default function KategoriContent(props) {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = (index) => {
+        setShow(index)
+    }
 
     return (
         <div>
             <Container>
                 <h6 className={style.text}>Hasil</h6>
                 {
-                    state?.data.data.map((item, index) => {
-                        // console.log("ini item", item ? item : null);
-                        return (
-                            <div key={index}>
-                                <div className={style.box}>
-                                    <div className={style.Posisi}>
-                                        {/* <FiIcons.FiUser size={20} className={style.space} /> */}
-                                        <Image src={gambar} width="20px" className={style.img} />
-                                        <h6>{item ? item.Name : null}</h6>
-                                    </div>
-                                    <div className={style.butPosisi}>
-                                        {/* <Button className={style.buttonDel} onClick={() => handleDelete(index)}>Hapus</Button> */}
-                                        {/* <Button className={style.buttonDel} >Hapus</Button> */}
-                                        {/* <input type="submit" className={style.delete} value="Hapus" /> */}
-                                        {/* <h6>Hapus</h6> 
+                    state ?
+                        state?.data.data.map((item, index) => {
+                            // console.log("ini item", item ? item : null);
+                            return (
+                                <div key={index}>
+                                    <div className={style.box}>
+                                        <div className={style.Posisi}>
+                                            {/* <FiIcons.FiUser size={20} className={style.space} /> */}
+                                            <Image src={gambar} width="20px" className={style.img} />
+                                            <h6>{item ? item.Name : null}</h6>
+                                        </div>
+                                        <div className={style.butPosisi}>
+                                            {/* <Button className={style.buttonDel} onClick={() => handleDelete(index)}>Hapus</Button> */}
+                                            {/* <Button className={style.buttonDel} >Hapus</Button> */}
+                                            {/* <input type="submit" className={style.delete} value="Hapus" /> */}
+                                            {/* <h6>Hapus</h6> 
                                         <h6>Posis</h6> */}
 
-                                        <button
-                                            type="submit"
-                                            className={style.delete}
-                                            onClick={() => handleDelete(item.ID)}
-                                        >Hapus</button>
+                                            <button
+                                                type="submit"
+                                                className={style.delete}
+                                                onClick={() => handleDelete(item.ID)}
+                                            >Hapus</button>
 
-                                        <button onClick={handleShow} className={style.edit}>
-                                            Edit
-                                        </button>
-                                        <Form>
-                                            <Modal show={show} onHide={handleClose} animation={false}
-                                                size="lg"
-                                                aria-labelledby="contained-modal-title-vcenter"
-                                                centered
-                                            >
-                                                <Modal.Header closeButton>
-                                                    <Modal.Title>Thread</Modal.Title>
-                                                </Modal.Header>
-                                                <Modal.Body>
+                                            <button onClick={() => handleShow(item.ID)} className={style.edit}>
+                                                Edit
+                                            </button>
+                                            <Form>
+                                                <Modal show={show == item.ID} onHide={handleClose} animation={false}
+                                                    size="lg"
+                                                    aria-labelledby="contained-modal-title-vcenter"
+                                                    centered
+                                                >
+                                                    <Modal.Header closeButton>
+                                                        <Modal.Title>Thread</Modal.Title>
+                                                    </Modal.Header>
+                                                    <Modal.Body>
 
-                                                    <br />
-                                                    <h6>Kategori : {item ? item.Name : null}</h6>
-                                                    <br />
-                                                    <Form.Control
-                                                        type="text"
-                                                        className={style.inputKat}
-                                                        name="kategori"
-                                                        value={Data.kategori}
-                                                        onChange={handleChange}
-                                                    />
-                                                </Modal.Body>
-                                                <Modal.Footer>
-                                                    <Button variant="secondary"
-                                                        onClick={handleClose}>
-                                                        Cancel
-                                                    </Button>
-                                                    <Button variant="primary"
-                                                        onClick={() => handleEdit(item.ID)}
-                                                    >
-                                                        Save
-                                                    </Button>
-                                                </Modal.Footer>
-                                            </Modal>
-                                        </Form>
+                                                        <br />
+                                                        <h6>Kategori : {item ? item.Name : null}</h6>
+                                                        <br />
+                                                        <Form.Control
+                                                            type="text"
+                                                            className={style.inputKat}
+                                                            name="kategori"
+                                                            value={Data.kategori}
+                                                            onChange={handleChange}
+                                                        />
+                                                    </Modal.Body>
+                                                    <Modal.Footer>
+                                                        <Button variant="secondary"
+                                                            onClick={handleClose}>
+                                                            Cancel
+                                                        </Button>
+                                                        <Button variant="primary"
+                                                            onClick={() => handleEdit(item.ID)}
+                                                        >
+                                                            Save
+                                                        </Button>
+                                                    </Modal.Footer>
+                                                </Modal>
+                                            </Form>
 
-                                        {/* <MyVerticallyCenteredModal
+                                            {/* <MyVerticallyCenteredModal
                                             show={modalShow}
                                             onHide={() => setModalShow(false)}
                                         /> */}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    })
+                            )
+                        })
+                        :
+                        null
                 }
                 <Row>
                     <Col>

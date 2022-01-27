@@ -4,14 +4,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import swal from 'sweetalert';
 
-export default function GetAllThread() {
+export default function GetAllUser() {
     const [state,setState] = useState(null)
     
-    const URL = `http://34.101.171.217:1234/thread`
+    const URL = `http://34.101.171.217:1234/all_user`
     let history = useNavigate();
     const i = 0
 
-    
             const getData = async () => {
                 Axios.get(URL)
                     .then(res => {
@@ -20,7 +19,7 @@ export default function GetAllThread() {
                         
                         // setProfile(res.data.data);
                         if (res) {
-                            console.log("berhasil")
+                            // console.log("berhasil")
                             
                         }
                     }).catch(error => {

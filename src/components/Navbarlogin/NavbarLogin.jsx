@@ -10,11 +10,20 @@ import * as FiIcons from 'react-icons/fi';
 import * as FaIcons from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import gambar from "../../img/logoDiskusiin.png"
+import { useDispatch } from 'react-redux';
+
+import { setToken } from '../../redux/slice';
 
 export default function NavbarLogin() {
     const [isDown, setIsDown] = useState(false);
     const setDown = () => {
         setIsDown(!isDown)
+    }
+
+    const dispatch = useDispatch()
+
+    const handleSubmit = async (e) => {
+        dispatch(setToken(""));
     }
 
     return (
@@ -42,8 +51,8 @@ export default function NavbarLogin() {
                             >
                                 {/* <Dropdown.Item href="#">Settings</Dropdown.Item>
                                 <Dropdown.Item href="#">testing</Dropdown.Item>
-                                <Dropdown.Divider />
-                                <Dropdown.Item href="#">Logout</Dropdown.Item> */}
+                                <Dropdown.Divider /> */}
+                                <Dropdown.Item onClick={handleSubmit}>Logout</Dropdown.Item>
                             </DropdownButton>
 
                         </div>

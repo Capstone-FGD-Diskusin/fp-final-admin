@@ -19,7 +19,7 @@ export default function DiskusiContent(props) {
     console.log("ini all thread", state ? state : null);
 
     const handleDelete = (index) => {
-        const URL = `http://localhost:1234/thread/` + index + ``
+        const URL = `http://34.101.171.217:1234/thread/` + index + ``
         Axios.delete(URL, {
             headers: { "Authorization": `Bearer ${token}` },
         }
