@@ -28,7 +28,7 @@ export default function KategoriInput(props) {
     const handleSubmit = async (e) => {
         console.log(Data);
         let isTrue = false;
-        const URL = `http://localhost:1234/category`
+        const URL = `http://34.101.171.217:1234/category`
         await Axios.post(URL,
             {
                 // email: data.fileRegis,

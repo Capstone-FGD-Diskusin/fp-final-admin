@@ -16,7 +16,7 @@ export default function MessageContent(props) {
     const token = useSelector((state) => state.dataUser.token)
 
     const handleDelete = (index) => {
-        const URL = `http://localhost:1234/message/` + index + ``
+        const URL = `http://34.101.171.217:1234/message/` + index + ``
         Axios.delete(URL, {
             headers: { "Authorization": `Bearer ${token}` },
         })

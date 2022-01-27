@@ -8,7 +8,7 @@ export default function GetAllMessage() {
     const [state,setState] = useState(null)
     
     const token = useSelector((state) => state.dataUser.token)
-    const URL = `http://localhost:1234/message/admin`
+    const URL = `http://34.101.171.217:1234/message/admin`
     let history = useNavigate();
 
     const getData = async () => {

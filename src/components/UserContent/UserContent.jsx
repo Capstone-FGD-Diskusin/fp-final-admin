@@ -55,7 +55,7 @@ export default function UserContent(props) {
         //     console.log("ini data", Data);
         //     setData(newData)
         // console.log(index);
-        const URL = `http://localhost:1234/user/` + index + ``
+        const URL = `http://34.101.171.217:1234/user/` + index + ``
         Axios.delete(URL
         )
             .then(res => {
@@ -98,7 +98,7 @@ export default function UserContent(props) {
 
     const handleUpdate = async (index) => {
         console.log("in data", Dataset);
-        const URLPut = `http://localhost:1234/user/upgrade`
+        const URLPut = `http://34.101.171.217:1234/user/upgrade`
         await Axios.put(URLPut,
             {
                 id: Dataset.idd,
