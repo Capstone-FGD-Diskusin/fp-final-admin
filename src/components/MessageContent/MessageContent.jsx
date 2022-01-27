@@ -58,6 +58,8 @@ export default function MessageContent(props) {
             })
     }
 
+
+
     return (
         <div>
             <h6 className={style.text}>Hasil</h6>
