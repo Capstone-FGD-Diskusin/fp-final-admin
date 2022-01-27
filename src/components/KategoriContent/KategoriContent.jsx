@@ -32,7 +32,7 @@ export default function KategoriContent(props) {
     }
 
     const handleEdit = (index) => {
-        const URLPut = `http://localhost:1234/category/` + index + ``
+        const URLPut = `http://34.101.171.217:1234/category/` + index + ``
         Axios.put(URLPut,
             {
                 // email: data.fileRegis,
@@ -79,7 +79,7 @@ export default function KategoriContent(props) {
 
     const handleDelete = (index) => {
         // console.log("ini index", index);
-        const URL = `http://localhost:1234/category/` + index + ``
+        const URL = `http://34.101.171.217:1234/category/` + index + ``
         Axios.delete(URL
         )
             .then(res => {
