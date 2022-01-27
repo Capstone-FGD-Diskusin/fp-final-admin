@@ -19,7 +19,7 @@ export default function GetAllUser() {
                         
                         // setProfile(res.data.data);
                         if (res) {
-                            console.log("berhasil")
+                            // console.log("berhasil")
                             
                         }
                     }).catch(error => {
